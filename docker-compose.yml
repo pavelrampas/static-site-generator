@@ -1,0 +1,11 @@
+services:
+    app:
+        image: rust:latest
+        volumes:
+            - ./content:/usr/src/myapp/content
+            - ./src:/usr/src/myapp/src
+            - ./public:/usr/src/myapp/public
+            - ./Cargo.lock:/usr/src/myapp/Cargo.lock
+            - ./Cargo.toml:/usr/src/myapp/Cargo.toml
+        working_dir: /usr/src/myapp
+        command: tail -F /dev/null
