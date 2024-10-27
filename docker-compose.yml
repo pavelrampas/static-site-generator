@@ -1,6 +1,8 @@
 services:
     app:
-        image: rust:latest
+        build:
+            context: .
+            dockerfile: Dockerfile
         volumes:
             - ./content:/usr/src/myapp/content
             - ./src:/usr/src/myapp/src

@@ -6,6 +6,9 @@ help: ## This help
 run: ## Run docker container
 	docker compose up --build -d
 
+run-force: ## Run docker container
+	docker compose up --build -d --force-recreate
+
 stop: ## Stop docker container
 	docker compose stop
 
