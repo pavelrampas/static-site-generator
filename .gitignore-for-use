@@ -1,0 +1,21 @@
+# Cargo files
+/target
+/src
+Cargo.lock
+Cargo.toml
+
+# Content files
+/content/static/img
+/content/static/pdf
+/public/img
+/public/pdf
+
+# Docker files
+docker-compose.yml
+docker-compose-dev.yml
+Dockerfile
+Dockerfile-dev
+makefile
+
+# Git files
+.gitignore-for-use
