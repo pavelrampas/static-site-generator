@@ -20,3 +20,21 @@ cli: ## Run shell inside docker container
 
 build: ## Build project
 	docker compose exec app cargo run
+
+run-dev: ## Run docker container develop
+	docker compose -f docker-compose-dev.yml up --build -d
+
+run-dev-force: ## Run docker container develop
+	docker compose -f docker-compose-dev.yml up --build -d --force-recreate
+
+stop-dev: ## Stop docker container develop
+	docker compose -f docker-compose-dev.yml stop
+
+down-dev: ## Drop docker container develop
+	docker compose -f docker-compose-dev.yml down
+
+cli-dev: ## Run shell inside docker container develop
+	docker compose -f docker-compose-dev.yml exec app bash
+
+build-dev: ## Build project develop
+	docker compose -f docker-compose-dev.yml exec app cargo run
